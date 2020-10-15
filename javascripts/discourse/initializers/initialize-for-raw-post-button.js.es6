@@ -15,10 +15,8 @@ export default {
       ) {
         api.attachWidgetAction("post-menu", "showRaw", function() {
           const model = this.attrs;
-          showModal("rawPost", {
-            model,
-            title: themePrefix("modal_title")
-          });
+          const url = "http://dnn.robot.ba";
+          window.open(url, '_blank');
         });
 
         api.addPostMenuButton("show-raw", () => {
