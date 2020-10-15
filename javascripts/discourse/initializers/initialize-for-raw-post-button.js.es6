@@ -3,7 +3,7 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 import showModal from "discourse/lib/show-modal";
 
 export default {
-  name: "raw-post-button",
+  name: "RobotDiscourceConnector",
   initialize() {
     withPluginApi("0.8.7", api => {
       const currentUser = api.getCurrentUser();
@@ -13,18 +13,18 @@ export default {
         currentUser.staff ||
         currentUser.trust_level >= settings.min_trust_level
       ) {
-        api.attachWidgetAction("post-menu", "showRaw", function() {
+        api.attachWidgetAction("post-menu", "utroseniSati", function() {
           const model = this.attrs;
-          const url = "http://dnn.robot.ba";
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=" + encodeURIComponent(model.title);  
           window.open(url, '_blank');
         });
 
         api.addPostMenuButton("show-raw", () => {
           return {
-            action: "showRaw",
-            icon: "file-alt",
+            action: "utroseniSati",
+            icon: "fa-check",
             className: "raw-post",
-            title: themePrefix("button_title"),
+            title: "Zabilježite utrošene sate",
             position: "second-last-hidden"
           };
         });
