@@ -15,14 +15,14 @@ export default {
       ) {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
           const model = this.attrs;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=" + encodeURIComponent(model.title);  
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=" + encodeURIComponent(title);  
           window.open(url, '_blank');
         });
 
         api.addPostMenuButton("show-raw", () => {
           return {
             action: "utroseniSati",
-            icon: "fab-whatsapp",
+            icon: "fa-check",
             className: "raw-post",
             title: "Zabilježite utrošene sate",
             position: "second-last-hidden"
