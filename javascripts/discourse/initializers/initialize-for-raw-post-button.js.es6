@@ -16,7 +16,7 @@ export default {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
           const model = this.attrs;
           const link = window.location.origin+model.shareUrl;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title="+titleNAziv;  
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title=UtrošakSati";  
           window.open(url, 'Utoršak vremena', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=1200,height=500');
         });
         
