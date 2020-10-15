@@ -20,18 +20,14 @@ export default {
         });
         
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
-          const model = this.attrs;
-          const link = window.location.href + '?u=' + currentUser.username;
-      
-          
-           
+           const model = this.attrs; 
            const link = window.location.href;
            const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link);
-           window.open(url, 'RobotTest', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=600,height=' + 265);
+           window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=600,height=' + 265);
            
         });
 
-        api.addPostMenuButton("utroseni-sati", () => {
+        api.addPostMenuButton("utroseni-sati", (attrs) => {
           return {
             action: "utroseniSati",
             icon: "cart-plus",
@@ -41,7 +37,7 @@ export default {
           };
         });
         
-         api.addPostMenuButton("kasa-problem", () => {
+         api.addPostMenuButton("kasa-problem", (attrs) => {
           return {
             action: "kasaProblem",
             icon: "check",
