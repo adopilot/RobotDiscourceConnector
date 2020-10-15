@@ -14,15 +14,10 @@ export default {
         currentUser.trust_level >= settings.min_trust_level
       ) {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
-          let titleNAziv;
-          $.getJSON(window.location.href + '.json', function (data) { 
-            var json = data;
-             titleNAziv = json.title;
-           });
           const model = this.attrs;
           const link = window.location.origin+model.shareUrl;
           const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title="+titleNAziv;  
-          window.open(url, '_blank');
+          window.open(url, 'Utoršak vremena', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=1200,height=500');
         });
         
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
@@ -32,7 +27,7 @@ export default {
            const model = this.attrs; 
            const link = window.location.origin+model.shareUrl;
            const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link);
-           window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=800,height=600');
+           window.open(url, 'Novi problem na kasi', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=800,height=600');
            
         });
         
@@ -40,7 +35,7 @@ export default {
            const model = this.attrs; 
            const link = window.location.origin+model.shareUrl;
            const url = "http://core.rgt.ba/ProblemiKasa/Zatvori?url=" + encodeURIComponent(link);
-           window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=800,height=600');
+           window.open(url, 'Zatvorite problem na kasi', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=800,height=600');
            
         });
 
