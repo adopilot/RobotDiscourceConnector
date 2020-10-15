@@ -14,14 +14,14 @@ export default {
         currentUser.trust_level >= settings.min_trust_level
       ) {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
-          var title;
+          let titleNAziv;
           $.getJSON(window.location.href + '.json', function (data) { 
             var json = data;
-             title = json.title;
+             titleNAziv = json.title;
            });
           const model = this.attrs;
           const link = window.location.origin+model.shareUrl;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title="+title;  
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title="+titleNAziv;  
           window.open(url, '_blank');
         });
         
