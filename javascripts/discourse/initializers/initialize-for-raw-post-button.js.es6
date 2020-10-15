@@ -70,7 +70,7 @@ export default {
             action: "kasaProblemGotovo",
             icon: "cart-arrow-down",
             className: "raw-post",
-            title: "Orvorite problem na kasi",
+            title: "Zatvorite problem na kasi",
             position: 'second-last-hidden'
           };
         });
