@@ -21,9 +21,9 @@ export default {
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
           const model = this.attrs;
           const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link); 
-           let params = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+          const paramsOpen = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
 width=0,height=0,left=-1000,top=-1000";
-          window.open(url, , "Robot", params);
+          window.open(url, , 'Robot', paramsOpen);
         });
 
         api.addPostMenuButton("show-raw", () => {
