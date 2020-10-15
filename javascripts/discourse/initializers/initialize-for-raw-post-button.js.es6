@@ -15,7 +15,8 @@ export default {
       ) {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
           const model = this.attrs;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=Naplata";  
+          const link = window.location.href;
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title=Naplata";  
           window.open(url, '_blank');
         });
         
