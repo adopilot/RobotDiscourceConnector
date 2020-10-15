@@ -20,14 +20,17 @@ export default {
         });
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
           const model = this.attrs;
-          const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(model.shareUrl); 
-          window.open(url, '_blank');
+           let params = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=600,height=300,left=100,top=100";
+
+          const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + model.shareUrl; 
+          window.open(url, 'Problem na kasi', params);
         });
 
         api.addPostMenuButton("show-raw", () => {
           return {
             action: "utroseniSati",
-            icon: "fa-check",
+            icon: "check",
             className: "raw-post",
             title: "Zabilježite utrošene sate",
             position: "second-last-hidden"
