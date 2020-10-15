@@ -22,7 +22,7 @@ export default {
         api.addPostMenuButton("show-raw", () => {
           return {
             action: "utroseniSati",
-            icon: "fas-check",
+            icon: "fab-whatsapp",
             className: "raw-post",
             title: "Zabilježite utrošene sate",
             position: "second-last-hidden"
