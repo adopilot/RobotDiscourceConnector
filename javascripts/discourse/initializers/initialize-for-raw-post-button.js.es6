@@ -18,11 +18,10 @@ export default {
           const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=Naplata";  
           window.open(url, '_blank');
         });
+        
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
           const model = this.attrs;
-           let params = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-width=600,height=300,left=100,top=100";
-
+          const params = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=300,left=100,top=100";
           const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + model.shareUrl; 
           window.open(url, 'Problem na kasi', params);
         });
@@ -30,10 +29,10 @@ width=600,height=300,left=100,top=100";
         api.addPostMenuButton("show-raw", () => {
           return {
             action: "utroseniSati",
-            icon: "check",
+            icon: "cart-plus",
             className: "raw-post",
-            title: "Zabilježite utrošene sate"
-          
+            title: "Zabilježite utrošene sate",
+            position: 'first'
           };
         });
         
@@ -42,8 +41,8 @@ width=600,height=300,left=100,top=100";
             action: "kasaProblem",
             icon: "cart-plus",
             className: "raw-post",
-            title: "Orvorite problem na kasi"
-            
+            title: "Orvorite problem na kasi",
+            position: 'first'
           };
         });
         
