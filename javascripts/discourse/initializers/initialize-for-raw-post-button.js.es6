@@ -32,7 +32,7 @@ width=0,height=0,left=-1000,top=-1000";
             icon: "fa-check",
             className: "raw-post",
             title: "Zabilježite utrošene sate",
-            position: "first-last-hidden"
+            position: "second-last-hidden"
           };
         });
         
