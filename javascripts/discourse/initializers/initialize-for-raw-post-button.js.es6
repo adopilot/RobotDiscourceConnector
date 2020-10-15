@@ -14,13 +14,21 @@ export default {
         currentUser.trust_level >= settings.min_trust_level
       ) {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
+          var title;
+          $.getJSON(window.location.href + '.json', function (data) { 
+            var json = data;
+             title = json.title;
+           });
           const model = this.attrs;
           const link = window.location.origin+model.shareUrl;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title=Naplata";  
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title=title";  
           window.open(url, '_blank');
         });
         
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
+           
+           
+           
            const model = this.attrs; 
            const link = window.location.origin+model.shareUrl;
            const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link);
@@ -41,8 +49,8 @@ export default {
             action: "utroseniSati",
             icon: "check",
             className: "raw-post",
-            title: I18n.t('Naplatite utrošene sate'),
-            position: 'last'
+            title: 'Naplatite utrošene sate',
+            position: 'first'
           };
         });
         
@@ -63,7 +71,7 @@ export default {
             icon: "cart-arrow-down",
             className: "raw-post",
             title: "Orvorite problem na kasi",
-            position: 'second-last-hidden'
+            position: 'first-last-hidden'
           };
         });
         
