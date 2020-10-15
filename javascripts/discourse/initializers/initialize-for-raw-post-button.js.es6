@@ -21,7 +21,7 @@ export default {
            });
           const model = this.attrs;
           const link = window.location.origin+model.shareUrl;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title=title";  
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title="+title;  
           window.open(url, '_blank');
         });
         
