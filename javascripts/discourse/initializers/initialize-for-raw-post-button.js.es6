@@ -18,6 +18,13 @@ export default {
           const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=" + encodeURIComponent(title);  
           window.open(url, '_blank');
         });
+         api.attachWidgetAction("post-menu", "kasaProblem", function() {
+          const model = this.attrs;
+          const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link); 
+           let params = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=0,height=0,left=-1000,top=-1000";
+          window.open(url, , "Robot", params);
+        });
 
         api.addPostMenuButton("show-raw", () => {
           return {
@@ -25,9 +32,20 @@ export default {
             icon: "fa-check",
             className: "raw-post",
             title: "Zabilježite utrošene sate",
+            position: "first-last-hidden"
+          };
+        });
+        
+         api.addPostMenuButton("show-raw", () => {
+          return {
+            action: "kasaProblem",
+            icon: "cart-plus",
+            className: "raw-post",
+            title: "Orvorite problem na kasi",
             position: "second-last-hidden"
           };
         });
+        
       }
     });
   }
