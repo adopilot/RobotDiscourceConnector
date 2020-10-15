@@ -15,14 +15,14 @@ export default {
       ) {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
           const model = this.attrs;
-          const link = window.location.origin+'/'+model.shareUrl;
+          const link = window.location.origin+model.shareUrl;
           const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link) + "&title=Naplata";  
           window.open(url, '_blank');
         });
         
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
            const model = this.attrs; 
-           const link = window.location.origin+'/'+model.shareUrl;
+           const link = window.location.origin+model.shareUrl;
            const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link);
            window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=800,height=600');
            
@@ -30,7 +30,7 @@ export default {
         
           api.attachWidgetAction("post-menu", "kasaProblemGotovo", function() {
            const model = this.attrs; 
-           const link = window.location.origin+'/'+model.shareUrl;
+           const link = window.location.origin+model.shareUrl;
            const url = "http://core.rgt.ba/ProblemiKasa/Zatvori?url=" + encodeURIComponent(link);
            window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=800,height=600');
            
@@ -42,7 +42,7 @@ export default {
             icon: "check",
             className: "raw-post",
             title: I18n.t('Naplatite utrošene sate'),
-            position: 'first-last-hidden'
+            position: 'last'
           };
         });
         
@@ -52,7 +52,7 @@ export default {
             icon: "cart-plus",
             className: "raw-post",
             title: "Orvorite problem na kasi",
-            position: 'second-last-hidden'
+            position: 'first-last-hidden'
           };
         });
         
