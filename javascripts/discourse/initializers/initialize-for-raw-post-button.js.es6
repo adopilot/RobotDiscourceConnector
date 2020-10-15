@@ -15,15 +15,13 @@ export default {
       ) {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
           const model = this.attrs;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=" + encodeURIComponent(title);  
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(model.shareUrl) + "&title=Naplata";  
           window.open(url, '_blank');
         });
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
           const model = this.attrs;
-          const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link); 
-          const paramsOpen = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-width=0,height=0,left=-1000,top=-1000";
-          window.open(url, , 'Robot', paramsOpen);
+          const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(model.shareUrl); 
+          window.open(url, '_blank');
         });
 
         api.addPostMenuButton("show-raw", () => {
