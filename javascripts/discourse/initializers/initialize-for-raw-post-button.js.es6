@@ -60,7 +60,7 @@ export default {
             icon: "cart-plus",
             className: "raw-post",
             title: "Orvorite problem na kasi",
-            position: 'first-last-hidden'
+            position: 'second-last-hidden'
           };
         });
         
@@ -71,7 +71,7 @@ export default {
             icon: "cart-arrow-down",
             className: "raw-post",
             title: "Orvorite problem na kasi",
-            position: 'first-last-hidden'
+            position: 'second-last-hidden'
           };
         });
         
