@@ -16,8 +16,8 @@ export default {
         api.attachWidgetAction("post-menu", "utroseniSati", function() {
           const model = this.attrs;
           const link = window.location.origin+model.shareUrl;
-          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link+ "&title=Unos utrošenog radnog vremena") ;  
-          window.open(url, 'Utoršak vremena', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=1200,height=500');
+          const url = "http://erp.rgt.ba/ipPref/Task?url=" + encodeURIComponent(link);  
+          window.open(url, 'Utoršak vremena', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=1200,height=800');
         });
         
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
