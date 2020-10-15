@@ -22,7 +22,7 @@ export default {
         api.addPostMenuButton("show-raw", () => {
           return {
             action: "utroseniSati",
-            icon: "fa-check",
+            icon: "fas-check",
             className: "raw-post",
             title: "Zabilježite utrošene sate",
             position: "second-last-hidden"
