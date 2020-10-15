@@ -21,12 +21,17 @@ export default {
         
          api.attachWidgetAction("post-menu", "kasaProblem", function() {
           const model = this.attrs;
-          const params = "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=300,left=100,top=100";
-          const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + model.shareUrl; 
-          window.open(url, 'Problem na kasi', params);
+          const link = window.location.href + '?u=' + currentUser.username;
+      
+          
+           
+           const link = window.location.href;
+           const url = "http://core.rgt.ba/ProblemiKasa/Create?url=" + encodeURIComponent(link);
+           window.open(url, 'RobotTest', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=600,height=' + 265);
+           
         });
 
-        api.addPostMenuButton("show-raw", () => {
+        api.addPostMenuButton("utroseni-sati", () => {
           return {
             action: "utroseniSati",
             icon: "cart-plus",
@@ -36,13 +41,13 @@ export default {
           };
         });
         
-         api.addPostMenuButton("show-raw", () => {
+         api.addPostMenuButton("kasa-problem", () => {
           return {
             action: "kasaProblem",
-            icon: "cart-plus",
+            icon: "check",
             className: "raw-post",
             title: "Orvorite problem na kasi",
-            position: 'first'
+            position: 'second'
           };
         });
         
