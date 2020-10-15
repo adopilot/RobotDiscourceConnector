@@ -32,8 +32,8 @@ width=600,height=300,left=100,top=100";
             action: "utroseniSati",
             icon: "check",
             className: "raw-post",
-            title: "Zabilježite utrošene sate",
-            position: "second-last-hidden"
+            title: "Zabilježite utrošene sate"
+          
           };
         });
         
@@ -42,8 +42,8 @@ width=600,height=300,left=100,top=100";
             action: "kasaProblem",
             icon: "cart-plus",
             className: "raw-post",
-            title: "Orvorite problem na kasi",
-            position: "second-last-hidden"
+            title: "Orvorite problem na kasi"
+            
           };
         });
         
